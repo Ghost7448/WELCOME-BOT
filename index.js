@@ -79,7 +79,7 @@ client.on("guildMemberAdd", async (member) => {
         .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
 
         // الصورة الكبيرة
-        .setImage("https://i.postimg.cc/cLnwh6Vy/file-00000000071071f482e5b9cfefa85b2f.png")
+        .setImage("https://i.postimg.cc/63XCPwC0/file-00000000071071f482e5b9cfefa85b2f.png")
 
         // الفوتر + الصورة الصغيرة (شمال تحت)
         .setFooter({
