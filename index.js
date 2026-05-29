@@ -36,7 +36,7 @@ client.on("guildMemberAdd", async (member) => {
 
         .setColor("#f1c40f")
 
-        .setTitle("🎉 أهلاً بك في عالم 𝑬𝑳𝑩𝑳𝑨𝑩𝑬𝑬𝑺")
+        .setTitle("🎉 أهلاً بك في عالم 𝘼𝙨𝙨𝙖𝙨𝙨𝙞𝙣𝙨 ")
 
         .setDescription(`
 💙 أهلاً وسهلاً بك يا ${member}
@@ -79,12 +79,12 @@ client.on("guildMemberAdd", async (member) => {
         .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
 
         // الصورة الكبيرة
-        .setImage("https://i.postimg.cc/W3RnvRTc/file-000000007aa4720ab1b9713e11b52f65.png")
+        .setImage("https://i.postimg.cc/cLnwh6Vy/file-00000000071071f482e5b9cfefa85b2f.png")
 
         // الفوتر + الصورة الصغيرة (شمال تحت)
         .setFooter({
-            text: "نتمني لك وقتا رائعا معنا | ELBLABEES FAMILY",
-            iconURL: "https://i.postimg.cc/nrGT23y6/file-00000000a3b8720a8091f603d942ee19.png"
+            text: "نتمني لك وقتا رائعا معنا | 𝘼𝙨𝙨𝙖𝙨𝙨𝙞𝙣𝙨 𝙁𝙖𝙢𝙞𝙡𝙮",
+            iconURL: "https://i.postimg.cc/SQg6NBWr/download.gif"
         })
 
         .setTimestamp();
