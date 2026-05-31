@@ -34,7 +34,7 @@ client.on("guildMemberAdd", async (member) => {
 
     const embed = new EmbedBuilder()
 
-        .setColor("#f1c40f")
+        .setColor("#242424")
 
         .setTitle("🎉 أهلاً بك في عالم 𝘼𝙨𝙨𝙖𝙨𝙨𝙞𝙣𝙨 ")
 
