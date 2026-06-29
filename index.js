@@ -34,60 +34,56 @@ client.on("guildMemberAdd", async (member) => {
 
     const embed = new EmbedBuilder()
 
-        .setColor("#242424")
+    .setColor("#242424")
 
-        .setTitle("🎉 أهلاً بك في عالم 𝘼𝙨𝙨𝙖𝙨𝙨𝙞𝙣𝙨 ")
+    .setTitle("🎉 أهلاً بك في عالم 𝘼𝙨𝙨𝙖𝙨𝙨𝙞𝙣𝙨")
 
-        .setDescription(`
-💙 أهلاً وسهلاً بك يا ${member}
+    .setDescription(`💙 أهلاً وسهلاً بك يا ${member}`)
 
-━━━━━━━━━━━━━━━━━━
-
-👤 معلومات عضويتك
-
-📝 الاسم:
+    .addFields(
+        {
+            name: "👤 معلومات عضويتك",
+            value:
+`**📝 الاسم**
 \`${member.user.username}\`
 
-🆔 ID:
+**🆔 ID**
 \`${member.user.id}\`
 
-📅 تاريخ الدخول:
-<t:${Math.floor(Date.now() / 1000)}:F>
+**📅 تاريخ الدخول**
+<t:${Math.floor(Date.now() / 1000)}:F>`,
+            inline: false
+        },
+        {
+            name: "📋 القوانين المهمة",
+            value:
+`✅ اقرأ جميع القوانين قبل البدء
+✅ احترم جميع الأعضاء
+✅ لا تشارك محتوى مزعج
+🎉 استمتع بالمجتمع`,
+            inline: false
+        },
+        {
+            name: "🌟 نصائح للبدء",
+            value:
+`1️⃣ اضغط على زر **قراءة القوانين**
+2️⃣ استكشف القنوات المختلفة
+3️⃣ تعرف على الأعضاء الآخرين
+4️⃣ استمتع داخل السيرفر`,
+            inline: false
+        }
+    )
 
-━━━━━━━━━━━━━━━━━━
+    .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
 
-📋 القوانين المهمة
+    .setImage("https://i.postimg.cc/63XCPwC0/file-00000000071071f482e5b9cfefa85b2f.png")
 
-✅ اقرأ جميع القوانين قبل البدء  
-✅ احترم جميع الأعضاء  
-✅ لا تشارك محتوى مزعج  
-🎉 استمتع بالمجتمع
+    .setFooter({
+        text: "نتمنى لك وقتًا رائعًا معنا | 𝘼𝙨𝙨𝙖𝙨𝙨𝙞𝙣𝙨 𝙁𝙖𝙢𝙞𝙡𝙮",
+        iconURL: "https://i.postimg.cc/SQg6NBWr/download.gif"
+    })
 
-━━━━━━━━━━━━━━━━━━
-
-🌟 نصائح للبدء
-
-1️⃣ اضغط على زر "قراءة القوانين"  
-2️⃣ استكشف القنوات المختلفة  
-3️⃣ تعرف على الأعضاء الآخرين  
-4️⃣ استمتع داخل السيرفر
-
-━━━━━━━━━━━━━━━━━━
-`)
-
-        // صورة العضو (فوق يمين)
-        .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
-
-        // الصورة الكبيرة
-        .setImage("https://i.postimg.cc/63XCPwC0/file-00000000071071f482e5b9cfefa85b2f.png")
-
-        // الفوتر + الصورة الصغيرة (شمال تحت)
-        .setFooter({
-            text: "نتمني لك وقتا رائعا معنا | 𝘼𝙨𝙨𝙖𝙨𝙨𝙞𝙣𝙨 𝙁𝙖𝙢𝙞𝙡𝙮",
-            iconURL: "https://i.postimg.cc/SQg6NBWr/download.gif"
-        })
-
-        .setTimestamp();
+    .setTimestamp();
 
     const row = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
