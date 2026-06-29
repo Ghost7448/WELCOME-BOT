@@ -63,15 +63,6 @@ client.on("guildMemberAdd", async (member) => {
 🎉 استمتع بالمجتمع`,
             inline: false
         },
-        {
-            name: "🌟 نصائح للبدء",
-            value:
-`1️⃣ اضغط على زر **قراءة القوانين**
-2️⃣ استكشف القنوات المختلفة
-3️⃣ تعرف على الأعضاء الآخرين
-4️⃣ استمتع داخل السيرفر`,
-            inline: false
-        }
     )
 
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
